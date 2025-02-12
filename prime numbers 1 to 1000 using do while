@@ -1,0 +1,29 @@
+ class Main{
+    public static void main(String[] args) {
+        System.out.println("Prime numbers between 1 and 1000:");
+
+        int num = 2; 
+
+        
+        do {
+            boolean isPrime = true; 
+
+            int i = 2;
+            while (i * i <= num) {
+                if (num % i == 0) {
+                    isPrime = false; 
+                    break;
+                }
+                i++;
+            }
+
+            
+            if (isPrime) {
+                System.out.println(num);
+            }
+
+            num++;
+        } while (num <= 1000);
+}
+}
+
