@@ -5,3 +5,10 @@ class Main {
                            b > a && b > c ? "B is greater" : "C is greater");
     }
 }
+class Main {
+    public static void main(String[] args) {
+        int a = 30, b = 50, c = 10;
+        System.out.println(a > b && a > c ? a : 
+                           b > a && b > c ? b : c);
+    }
+}
