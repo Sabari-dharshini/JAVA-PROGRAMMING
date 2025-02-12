@@ -1,0 +1,21 @@
+class Main {
+    public static void main(String[] args) {
+        int n=15;
+        int i=2;
+        if(n<=1)
+        {
+            System.out.println("Not a prime number");
+            i++;
+            
+        }
+        else if(n%i!=0)
+        {
+            System.out.println("It is a prime number");
+            
+        }
+        else{
+            System.out.println("Not a prime number");
+        }
+    
+    }
+}
