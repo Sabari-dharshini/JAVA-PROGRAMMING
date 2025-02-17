@@ -1,0 +1,34 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int rows = 4; 
+        int sum = 0;
+        int number = sc.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            
+            for (int j = 1; j <= i; j++) {
+                System.out.print(number);
+            }
+            System.out.println();
+           
+            int rowValue = 0;
+            for (int j = 1; j <= i; j++) {
+                rowValue = rowValue * 10 + number;
+            }
+
+            sum += rowValue;
+           
+        }
+
+        System.out.println("Sum of all rows: " + sum);
+    }
+}
+
+7
+7
+77
+777
+7777
+Sum of all rows: 8638
