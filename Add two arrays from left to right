@@ -1,0 +1,70 @@
+class Main{
+    public static void main(String[]args){
+        int arr[]={5,1,3};
+        int arrr[]={9,7,7,7};
+        int [] sumarr=new int[arr.length];
+        int carry=0;
+         for (int i = arr.length - 1; i >= 0; i--){
+            int sum=arr[i]+arrr[i]+carry;
+            
+            sumarr[i]=sum%10;
+            carry=sum/10;
+        }
+        for(int i=0;i<sumarr.length;i++){
+            System.out.print(sumarr[i]+" ");
+        }
+        
+    }
+}
+class Main{
+    public static void main(String[]args){
+        int []arr1={5,1,3};
+        int []arr2={9,7,7,7};
+        int []sumarr=new int[5];
+        int carry=0;
+        int i=arr1.length-1;
+        int j=arr2.length-1;
+        int k=sumarr.length-1;
+        while(i>=0||j>=0||carry!=0){
+            int sum=carry;
+        
+        if(i>=0){
+            sum+=arr1[i--];
+        }
+        if(j>=0){
+            sum+=arr2[j--];
+        }
+        sumarr[k--]=sum%10;
+        carry=sum/10;
+        }
+        for(int num:sumarr){
+            System.out.print(num+" ");
+        }
+    }
+}
+class Main{
+    public static void main(String[]args){
+        int []arr1={4,5,6,7};
+        int []arr2={4,5,6,7};
+        int []sumarr=new int[5];
+        int carry=0;
+        int i=0,sum=0;
+       
+        while(i<arr1.length){
+            if(arr1.length==arr2.length){
+                sum=arr1[i]+arr2[i]+carry;
+                sumarr[i]=sum%10;
+                carry=sum/10;
+                
+            }
+            i++;
+           
+        
+        }
+        sumarr[i]=carry;
+        
+        for(int j=0;j<sumarr.length;j++){
+            System.out.print(sumarr[j]+" ");
+        }
+    }
+}
