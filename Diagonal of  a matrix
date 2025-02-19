@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        int row=3;
+        int col=3;
+        
+        int [][]arr=new int[row][col];
+        System.out.println("Enter the two dimensional array");
+        for( int i=0;i<row;i++){
+            for( int j=0;j<col;j++){
+                arr[i][j]=sc.nextInt();
+                
+                System.out.print(arr[i][j]+" ");
+                
+               
+            }
+            System.out.println();
+    }
+    System.out.println("The diagonal of a matrix");
+    for(int i=0;i<row;i++){
+        System.out.print(arr[i][i]+" ");
+    }
+}
+}
+
+Enter the two dimensional array
+9 1 8 2 7 3 6 4 5
+9 1 8 
+2 7 3 
+6 4 5 
+The diagonal of a matrix
+9 7 5 
+
+...Program finished with exit code 0
+Press ENTER to exit console.
