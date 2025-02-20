@@ -1,0 +1,60 @@
+import java .util.Scanner;
+class Main{
+    String name;
+    int regNo;
+    
+    public void get(){
+        Scanner scan=new Scanner(System.in);
+       
+        name=scan.next();
+        regNo=scan.nextInt();
+        
+    }
+    public void display(){
+        System.out.println("The name of student is "+name);
+        System.out.println("the register number of a student is "+regNo);
+    }
+    public static void main(String[]args){
+        for(int i=1;i<=5;i++){
+        Main s1=new Main();
+        System.out.println("Enter the details of student "+i);
+      s1.get();
+      
+      s1.display();
+       
+        
+       
+    }
+}
+}
+
+Enter the details of student 1
+sabari
+95
+The name of student is sabari
+the register number of a student is 95
+Enter the details of student 2
+preethi
+88
+The name of student is preethi
+the register number of a student is 88
+Enter the details of student 3
+preetha
+87
+The name of student is preetha
+the register number of a student is 87
+Enter the details of student 4
+sneha
+107 
+The name of student is sneha
+the register number of a student is 107
+Enter the details of student 5
+lavanya
+65
+The name of student is lavanya
+the register number of a student is 65
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+
