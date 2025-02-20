@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class car{
+    car(){
+        String Brand="unknown";
+        System.out.println("The brand of the car is "+Brand);
+    }
+    public void setBrand(){
+        String Brand="HYUNDAI";
+        System.out.println("The brand of the car is "+Brand);
+    }
+}
+class Main{
+    public static void main(String[]args){
+        car c=new car();
+        c.setBrand();
+       
+    }
+}
