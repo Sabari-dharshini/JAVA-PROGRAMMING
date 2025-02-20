@@ -1,0 +1,21 @@
+class Book{
+    String title;
+    String author;
+    double price;
+    Book(String title,String author,double price){
+        this.title=title;
+        this.author=author;
+        this.price=price;
+    }
+    public void display(){
+        System.out.println("The book title is " +title);
+        System.out.println("The author of book is " +author);
+        System.out.println("The price of the book is " +price);
+    }
+}
+class Main{
+    public static void main(String[]args){
+        Book b=new Book("Merchant of venice","Shakespeare",280.0);
+        b.display();
+    }
+}
