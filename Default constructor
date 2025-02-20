@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class Book{
+    String title="Java Programming";
+    double price=100.0;
+    Book(){
+        
+        System.out.println("Book title : "+title);
+        System.out.println("Price of the book : "+price);
+    }
+}
+class Main{
+    public static void main(String[]args){
+        Book b=new Book();
+    }
