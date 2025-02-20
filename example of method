@@ -1,0 +1,49 @@
+import java.util.Scanner;
+class carRental{
+    int carId;
+    String carType;
+    float rent;
+    public void getCar(){
+        Scanner scan=new Scanner(System.in);
+        carId=scan.nextInt();
+        carType=scan.next();
+    }
+    public void getRent(){
+        if(carType.equals("smallcar")){
+            rent=1000;
+        }else if(carType.equals("van")){
+            rent=800;
+        }else if(carType.equals("SUV")){
+            rent=2500;
+        }else {
+            System.out.println("Invalid car type");
+            rent = 0;
+        }
+    }
+    public void showCar(){
+        System.out.println("The car id is"+carId);
+        System.out.println("The car type is "+carType);
+        System.out.println("The rent of the car is "+rent);
+    }
+}
+    class Main{
+        public static void main(String[]args){
+            
+            carRental car=new carRental();
+            car.getCar();
+            car.getRent();
+            car.showCar();
+        }
+    }
+
+
+
+4119
+van
+The car id is4119
+The car type is van
+The rent of the car is 800.0
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
