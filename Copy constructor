@@ -1,0 +1,26 @@
+class Rectangle{
+    double length;
+    double width;
+    
+    Rectangle(double length,double width){
+        this.length=length;
+        this.width=width;
+        
+    }
+    Rectangle(Rectangle r){
+        this.length=r.length;
+        this.width=r.width;
+    }
+    public void display(){
+        System.out.println("The length of a rectangle is " +length);
+        System.out.println("The width of a rectangle is " +width);
+    }
+}
+class Main{
+    public static void main(String[]args){
+        Rectangle rectangle=new Rectangle(20.0,15.0);
+        Rectangle rect=new Rectangle(rectangle);
+        rectangle.display();
+        rect.display();
+    }
+}
