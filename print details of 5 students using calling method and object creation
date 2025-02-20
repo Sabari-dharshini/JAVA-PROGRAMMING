@@ -1,0 +1,42 @@
+import java .util.Scanner;
+class Main{
+    String name;
+    int regNo;
+    
+    public void get(){
+        Scanner scan=new Scanner(System.in);
+       
+        name=scan.next();
+        regNo=scan.nextInt();
+        
+    }
+    public void display(){
+        System.out.println("The name of student is "+name);
+        System.out.println("the register number of a student is "+regNo);
+    }
+    public static void main(String[]args){
+        Main s1=new Main();
+      s1.get();
+      Main s2=new Main();
+      s2.get();
+      Main s3=new Main();
+      s3.get();
+      Main s4=new Main();
+      s4.get();
+      Main s5=new Main();
+      s5.get();
+      System.out.println("Student 1");
+       s1.display();
+       System.out.println("Student 2");
+       s2.display();
+       System.out.println("Student 3");
+       s3.display();
+       System.out.println("Student 4");
+       s4.display();
+       System.out.println("Student 5");
+       s5.display();
+       
+        
+       
+    }
+}
