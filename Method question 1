@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class example{
+    public int a,b,c;
+    public void display(){
+        System.out.println("The sum of two numbers is "+c);
+    }
+}
+class Main{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        example e=new example();
+        e.a=sc.nextInt();
+        e.b=sc.nextInt();
+        e.c=e.a + e.b;
+        e.display();
+        
+        
+    }
+}
