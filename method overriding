@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+class Shape {
+    protected double area;
+    
+    public void calculate_area() {
+        System.out.println("Area of shapes");
+    }
+
+    public double getArea() {
+        return area;
+    }
+}
+
+class Square extends Shape {
+    private int a;
+
+    @Override
+    public void calculate_area() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter side length of the square (a): ");
+        a = sc.nextInt();
+        area = a * a; 
+    }
+}
+
+class Circle extends Shape {
+    private static final double PI = 3.14;
+    private int r;
+
+    @Override
+    public void calculate_area() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter radius (r): ");
+        r = sc.nextInt();
+        area = PI * r * r; 
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape s1 = new Square();  
+        s1.calculate_area(); 
+        System.out.println("Area of the square: " + s1.getArea());
+
+        Shape s2 = new Circle();  
+        s2.calculate_area();  
+        System.out.println("Area of the circle: " + s2.getArea());
+    }
+}
