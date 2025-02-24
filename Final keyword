@@ -1,0 +1,23 @@
+public class Final{
+    public static void main(String[]args){
+         final double pi=3.14;
+        pi=3.0;
+        System.out.println(pi);
+    }
+}
+public class Final{
+    public static void main(String[]args){
+     double pi=3.14;
+        pi=3.0;
+        System.out.println(pi);
+    }
+}
+class A{
+void method(int x){
+System.out.println("Class A parameter"+x);
+}}
+class c extends A
+{
+void test(){
+System.out.println("Test");
+}
