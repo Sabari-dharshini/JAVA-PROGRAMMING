@@ -1,0 +1,28 @@
+abstract class MyAbstractClass {
+    public static final int a;
+    static {
+       
+        a = 10; 
+    }
+
+    
+    public abstract void myAbstractMethod();
+
+  
+    
+}
+
+class MyConcreteClass extends MyAbstractClass{
+    public void myAbstractMethod() {
+        System.out.println("Abstract method implemented!");
+    }
+
+    public static void main(String[] args) {
+        MyConcreteClass obj = new MyConcreteClass();
+        
+        obj.myAbstractMethod(); 
+    }
+}
+
+   
+
