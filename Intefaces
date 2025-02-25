@@ -1,0 +1,42 @@
+class interfaceClass implements a1,b1{
+    public static void main(String[]args){
+        public test(){
+        System.out.println("Test method");
+        
+    }
+        
+    }
+}
+interface a1{
+    void test();
+}
+interface b1{
+    void test();
+}
+class test implements a1,b1{
+    public test(){
+        System.out.println("Test method");
+        
+    }
+}
+    
+interface cub{
+    void roi();
+    void runMethod()
+    {
+        System.out.println("run method");
+    }
+}
+interface indian{
+    void roi();
+}
+public interface sbi{
+    void roi();
+}
+class Main{
+    public static void main(String[]args){
+        
+    }
+}
+
+                                                                                                                    
