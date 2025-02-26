@@ -1,0 +1,50 @@
+abstract class A{
+    abstract public void display();
+    public void show(){
+        System.out.println("Inside A show");
+    }
+    abstract class B{
+        abstract public void call();
+    public void print(){
+        System.out.println("Inside B print");
+    }
+        
+    }
+}
+class X extends A{
+    public void display()
+    {
+         System.out.println("Inside A show");
+        
+    
+    }
+    
+    public void call(){
+          System.out.println("Inside b show");
+        
+    }
+}
+class Main{
+    public static void main(String[]args){
+        X obj=new X();
+        obj.display();
+       
+        obj.call();
+    }
+}
+
+
+
+
+
+OUTPUT
+
+
+Inside A show
+Inside b show
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+
+
