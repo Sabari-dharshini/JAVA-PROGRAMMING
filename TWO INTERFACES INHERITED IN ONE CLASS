@@ -1,0 +1,51 @@
+interface One {
+    static void disp() {
+        System.out.println("Static method from Interface One");
+    }
+    
+    default void display() {
+        System.out.println("Default method from Interface One");
+    }
+    
+    abstract void dis();
+}
+
+interface Two {
+    static void disp() {
+        System.out.println("Static method from Interface Two");
+    }
+    
+    default void display() {
+        System.out.println("Default method from Interface Two");
+    }
+    
+    abstract void dis();
+}
+
+class Main implements One, Two {
+    public void display() {
+     
+        System.out.println("Overridden display method in Main class");
+    }
+    public void dis() {
+        System.out.println("Implemented abstract method dis");
+    }
+    public static void main(String[] args) {
+        Main obj = new Main();
+        One.disp(); 
+        Two.disp();  
+        obj.display();
+        obj.dis();
+    }
+}
+Static method from Interface One
+Static method from Interface Two
+Overridden display method in Main class
+Implemented abstract method dis
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+
+
+
