@@ -1,0 +1,31 @@
+class Main{
+    public static void main(String[]args){
+        int n=7;
+        int result=n*n;
+        result%=10;
+        if(result==n){
+            System.out.println("It is an automorphic number ");
+        }else{
+            System.out.println("It is not an automorphic number");
+        }
+    }
+    
+}
+class Main{
+    public static void main(String[]args){
+        int n=5,result;
+        result=n*n;
+        int temp=n;
+        int mod=1;
+        while(temp>0){
+            mod*=10;
+            temp/=10;
+        }
+        if(result%mod==n){
+            System.out.println("It is an automorphic number ");
+        }else{
+            System.out.println("It is not an automorphic number");
+        }
+    }
+    
+}
