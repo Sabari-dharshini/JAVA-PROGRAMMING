@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a decimal number: ");
+        int decimal = scanner.nextInt();
+        scanner.close();
+
+        
+        String binary = Integer.toBinaryString(decimal);
+        String octal = Integer.toOctalString(decimal);
+        String hexadecimal = Integer.toHexString(decimal).toUpperCase();
+
+        
+        System.out.println("Binary: " + binary);
+        System.out.println("Octal: " + octal);
+        System.out.println("Hexadecimal: " + hexadecimal);
+    }
+}
