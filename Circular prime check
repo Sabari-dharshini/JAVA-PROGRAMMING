@@ -30,3 +30,45 @@ public class Main{
         System.out.println(num + " is a Circular Prime!");
     }
 }
+
+class Main {
+    public static void main(String[] args) {
+        int n = 1195;
+        int d = 0, mul = 1, temp, temp1, temp2, temp3, mul1;
+        boolean flag = isPrime(n);
+        
+        if (flag) {
+            temp = n;
+            while (temp > 0) {
+                d++;
+                mul *= 10;
+                temp /= 10;
+            }
+            mul /= 10; 
+            
+            temp1 = n;
+            for (int i = 0; i < d; i++) {
+                if (!isPrime(temp1)) {
+                    System.out.println(n + " is NOT a Circular Prime.");
+                    return;
+                }
+                temp2 = temp1 % 10;  
+                temp3 = temp1 / 10;  
+                temp1 = (temp2 * mul) + temp3;  
+            }
+            System.out.println(n + " is a Circular Prime!");
+        } else {
+            System.out.println(n + " is NOT a Circular Prime.");
+        }
+    }
+
+    
+    public static boolean isPrime(int num) {
+        if (num < 2) return false;
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+}
+
