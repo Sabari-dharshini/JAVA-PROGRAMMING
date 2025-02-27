@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a prime number: ");
+        int num = scanner.nextInt();
+        scanner.close();
+
+        int temp = num, digits = 0, pow = 1;
+        while (temp > 0) {
+            digits++;
+            pow *= 10;
+            temp /= 10;
+        }
+        pow /= 10;
+
+        temp = num;
+        for (int i = 0; i < digits; i++) {
+            int a = 2;
+            while (a * a <= temp) {
+                if (temp % a == 0) {
+                    System.out.println(num + " is NOT a Circular Prime.");
+                    return;
+                }
+                a++;
+            }
+            temp = (temp % 10) * pow + (temp / 10);
+        }
+        System.out.println(num + " is a Circular Prime!");
+    }
+}
