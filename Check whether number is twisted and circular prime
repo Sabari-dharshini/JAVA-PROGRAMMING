@@ -1,0 +1,65 @@
+public class Main {
+    
+    
+    public static boolean isPrime(int num) {
+        if (num < 2) return false;
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+
+   
+    public static int reverseNumber(int num) {
+        int rev = 0;
+        while (num > 0) {
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+        return rev;
+    }
+
+   
+    public static boolean isTwistedPrime(int num) {
+        int reversed = reverseNumber(num);
+        return isPrime(num) && isPrime(reversed);
+    }
+
+   
+    public static boolean isCircularPrime(int num) {
+        String strNum = Integer.toString(num);
+        int len = strNum.length();
+        for (int i = 0; i < len; i++) {
+            int rotated = Integer.parseInt(strNum.substring(i) + strNum.substring(0, i));
+            if (!isPrime(rotated)) return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Twisted Prime Numbers from 1 to 1000:");
+        for (int i = 1; i <= 1000; i++) {
+            if (isTwistedPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
+
+       
+        int num = 73;
+
+        if (isPrime(num)) {
+            System.out.println(num + " is a prime number.");
+            if (isTwistedPrime(num)) {
+                System.out.println(num + " is a twisted prime number.");
+            }
+            if (isCircularPrime(num)) {
+                System.out.println(num + " is a circular prime number.");
+            }
+            if (isTwistedPrime(num) && isCircularPrime(num)) {
+                System.out.println(num + " is both a twisted and circular prime number!");
+            }
+        } else {
+            System.out.println(num + " is not a prime number.");
+        }
+    }
+}
