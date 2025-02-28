@@ -1,0 +1,147 @@
+QUESTION_1 Find the third maximum in a  2D array
+
+class Main {
+    public static void main(String[] args) {
+        int arr[][] = {{5,8,5}, {5,7,5}, {5,6,5}};
+        
+        int max = arr[0][0];
+        int secondMax =arr[0][0];
+        int thirdMax = arr[0][0];
+
+        
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                int num = arr[i][j];  
+
+                if (num > max) {
+                    thirdMax = secondMax;
+                    secondMax = max;
+                    max = num;
+                } else if (num > secondMax && num < max) {
+                    thirdMax = secondMax;
+                    secondMax = num;
+                } else if (num > thirdMax && num < secondMax) {
+                    thirdMax = num;
+                }
+            }
+        }
+
+        if (max == thirdMax) {
+            System.out.println("No third maximum element found.");
+        } else {
+            System.out.println("Third Maximum: " + thirdMax);
+        }
+    }
+}
+
+
+___________________________________________________________________________________________________________________________________________________________________________
+
+2.Sort the matrix
+
+5 4 6   1 2 3
+1 8 3   4 5 6
+9 6 2   7 8 9
+
+import java.util.Arrays;
+class Main{
+    public static void main(String[]args){
+        int rows=3;
+        int cols=3;
+        int arr[][]={{5,4,7},{1,8,3},{9,6,2}};
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+        int []arr1=new int[rows*cols];
+        int index=0;
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                arr1[index++]=arr[i][j];
+            }
+        }
+         Arrays.sort(arr1);
+         index=0;
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                arr[i][j]=arr1[index++];
+            }
+        }
+       
+       
+    
+    System.out.println("The sorted matrix is");
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+            System.out.print(arr[i][j]+" ");
+        }
+        System.out.println();
+    }
+}
+}
+
+OUTPUT
+
+5 4 7 
+1 8 3 
+9 6 2 
+The sorted matrix is
+1 2 3 
+4 5 6 
+7 8 9 
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+
+_____________________________________________________________________________________________________________________________________________________________________________---
+
+
+3.If input is  
+5 4 7 
+1 8 3 
+9 6 2  output should be 5 4 7 
+                        4 8 3
+                        7 3 2
+
+
+
+______________________________________________________________________________________________________________________________________________________________________________
+
+4.  Given  2Darray print all the abundunt numbers and if the count ie even print yes else print no
+
+public class Main { 
+    public static void main(String[] args) { 
+        int[][] array = { 
+            {11, 12, 13}, 
+            {14, 15, 16}, 
+            {17, 1, 19} 
+        }; 
+        
+        int count = 0; 
+        
+        for (int i = 0; i < array.length; i++) { 
+            for (int j = 0; j < array[i].length; j++) { 
+                int num = array[i][j]; 
+                int sum = 0; 
+                
+                for (int k = 1; k <= num / 2; k++) { 
+                    if (num % k == 0) { 
+                        sum += k; 
+                        count++; 
+                    } 
+                } 
+            } 
+        } 
+        
+        if (count % 2 == 0) { 
+            System.out.println("yes"); 
+        } else { 
+            System.out.println("no"); 
+        } 
+    } 
+}
+
+_________________________________________________________________________________________________________________________________________________________________________-
