@@ -81,3 +81,35 @@ The sum of the two long numbers
 Press ENTER to exit console.
 
 
+import java.util.Scanner;
+class Main{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the first number");
+        String a=sc.next();
+        System.out.println("Enter the second number");
+        String b=sc.next();
+        int carry=0;
+         String sum="";
+        int i=a.length()-1;
+        int j=b.length()-1;
+        while(i>=0 || j>=0 ||carry>0)
+        {
+            
+       int digit1 = (i >= 0) ? a.charAt(i) - '0' : 0; 
+       int digit2 = (j >= 0) ? b.charAt(j) - '0' : 0; 
+
+        int digitsum=digit1+digit2+carry;
+        carry=digitsum/10;
+        sum=( digitsum%10 )+ sum;
+        i--;
+        j--;
+        
+        }
+        System.out.println("The sum of the two long numbers ");
+        System.out.println(sum);
+        
+        
+        
+    }
+}
