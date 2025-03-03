@@ -1,0 +1,63 @@
+class Shape{
+   void Area(){
+       System.out.println("The area of different shapes");
+        
+    }
+}
+class rectangle extends Shape{
+    double l,b;
+    rectangle(double l,double b){
+        this.l=l;
+        
+        
+        this.b=b;
+    }
+    void Area(){
+        double area=l*b;
+        System.out.println("The area of the rectangle is "+area);
+    }
+}
+class Triangle extends Shape{
+    double b,h;
+    Triangle(double b,double h){
+        this.b=b;
+        this.h=h;
+    }
+    void Area(){
+        double triaArea=0.5*b*h;
+        System.out.println("The area of triangle is "+triaArea);
+    }
+}
+class Square extends Shape{
+    double a;
+    Square(double a){
+        this.a=a;
+    }
+    void Area(){
+        double sqArea=a*a;
+        System.out.println("The area of the square is "+sqArea);
+    }
+}
+class Circle extends Shape{
+    double r;
+    final double pi=3.14;
+    Circle(double r){
+        this .r=r;
+    }
+    void Area(){
+        double cirArea=pi*r*r;
+        System.out.println("The area of the circle is "+cirArea);
+    }
+}
+class Main{
+    public static void main(String[]args){
+        rectangle r=new rectangle(12.0,13.0);
+        r.Area();
+        Triangle t=new Triangle(15.0,20.0);
+        t.Area();
+        Square s=new Square(4.0);
+        s.Area();
+        Circle c=new Circle(2.0);
+        c.Area();
+    }
+}
