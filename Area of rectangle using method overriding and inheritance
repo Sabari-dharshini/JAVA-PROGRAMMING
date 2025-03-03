@@ -1,0 +1,23 @@
+class Shape{
+   void Area(){
+       System.out.println("The area of different shapes");
+        
+    }
+}
+class rectangle extends Shape{
+    double l,b;
+    rectangle(double l,double b){
+        this.l=l;
+        this.b=b;
+    }
+    void Area(){
+        double area=l*b;
+        System.out.println("The area of the rectangle is "+area);
+    }
+}
+class Main{
+    public static void main(String[]args){
+        rectangle r=new rectangle(12.0,13.0);
+        r.Area();
+    }
+}
