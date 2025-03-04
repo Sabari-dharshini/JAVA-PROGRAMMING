@@ -1,0 +1,70 @@
+import java .util.Scanner;
+class Palindromechecker{
+    Scanner sc=new Scanner(System.in);
+    public void checkstring()
+    {
+        
+        String s=sc.next();
+        String rev="";
+         for (int i = s.length() - 1; i >= 0; i--) {
+            rev += s.charAt(i); 
+        }
+       
+        
+            if(s.equals(rev)){
+                System.out.println("Palindrome");
+            }else{
+                System.out.println("Not a palindrome");
+            }
+        
+        
+    }
+
+public void checkbuilder(){
+    String str=sc.next();
+    StringBuilder s1=new StringBuilder(str);
+    
+   String rev1=s1.reverse().toString();
+    if(str.equals(rev1)){
+        System.out.println("Palindrome");
+    }
+    else{
+        System.out.println("Not a palindrome");
+    }
+}
+public void checkbuffer(){
+    String str1=sc.next();
+    StringBuffer s2=new StringBuffer(str1);
+    String rev2=s2.reverse().toString();
+    if(str1.equals(rev2)){
+        System.out.println("Palindrome");
+        
+    }else{
+        System.out.println("Not a palindrome");
+    }
+    
+}
+
+}
+class Main{
+    public static void main(String[]args){
+        Palindromechecker c=new Palindromechecker();
+        c.checkstring();
+        c.checkbuilder();
+        c.checkbuffer();
+        
+    }
+}
+
+racecar
+Palindrome
+mom
+Palindrome
+
+dad
+Palindrome
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+
