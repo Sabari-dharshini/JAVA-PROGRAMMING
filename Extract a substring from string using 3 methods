@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class Extract{
+    
+    Scanner scan=new Scanner(System.in);
+    public void subs(){
+    String str="Helloworld";
+    String substr=str.substring(5);
+    System.out.println(substr);
+    
+}
+public void checkbuild(){
+    StringBuilder s1=new StringBuilder("Hellojava");
+    String substr1=s1.substring(0,5);
+    System.out.println(substr1);
+}
+public void checkbuffer(){
+    StringBuffer s2= new StringBuffer("Hellofriend");
+    String substr2=s2.substring(5);
+    System.out.println(substr2);
+    
+}
+}
+class Main{
+    public static void main(String[]args){
+        Extract e = new Extract();
+        e.subs();
+        e.checkbuild();
+        e.checkbuffer();
+    }
+}
