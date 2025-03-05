@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        String S = "java"; 
+        int K = 2;
+        String smallest = S.substring(0, K);
+        String largest = S.substring(0, K);
+        for (int i = 1; i <= S.length() - K; i++) {
+            String sub = S.substring(i, i + K);
+            if (sub.compareTo(smallest) < 0) {
+                smallest = sub;
+            }
+            if (sub.compareTo(largest) > 0) {
+                largest = sub;
+            }
+        }
+
+        System.out.println(smallest);
+        System.out.println(largest);
+    }
+}
