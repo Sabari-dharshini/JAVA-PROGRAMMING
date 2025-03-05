@@ -1,0 +1,114 @@
+EFFICIENTLY REPLACE A SUBSTRING
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        String s1=sc.nextLine();
+        String s2=sc.nextLine();
+        String result=s.replace(s1,s2);
+        System.out.println(result);
+    }
+}
+
+
+
+Congratulations, you passed the sample test case.
+
+Click the Submit Code button to run your code against all the test cases.
+
+Input (stdin)
+
+I love Java programming
+Java
+Python
+Your Output (stdout)
+
+I love Python programming
+Expected Output
+
+I love Python programming
+
+
+
+
+
+
+
+CHECK IF STRINGS ARE ANAGRAM
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        String s1=sc.nextLine();
+        String s2=sc.nextLine();
+        if (s1.length() != s2.length()) {
+            System.out.println("NO");
+        }
+        char[] arr1 = s1.toCharArray();
+        char[] arr2 = s2.toCharArray();
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        System.out.println(Arrays.equals(arr1, arr2) ? "YES" : "NO");
+    }
+}
+
+
+
+REVERSE WORDS IN A STRING
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+         
+        String s=scan.nextLine();
+        boolean hasSpace = s.startsWith("\"") && s.endsWith("\"");
+        if (hasSpace) {
+            s = s.substring(1, s.length() - 1).trim(); 
+        }
+        String []words=s.trim().split("\\s+");
+         StringBuilder rev = new StringBuilder();
+        for(int i=words.length-1;i>=0;i--){
+            rev.append(words[i]);
+            if(i>0){
+                rev.append(" ");
+            } 
+        }
+       
+        if (hasSpace) {
+            System.out.println("\"" + rev.toString() + "\"");
+        } else {
+            System.out.println(rev.toString());
+        }
+    }
+        
+    }
+
+
